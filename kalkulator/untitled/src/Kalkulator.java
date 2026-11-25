@@ -4,12 +4,17 @@ import javax.swing.JButton;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
 
 public class Kalkulator {
     public static void main(String[] args){
         JFrame jendela = new JFrame();
         JPanel meja = new JPanel();
         GridLayout layout = new GridLayout(4,4);
+        jendela.setTitle("Kalkulator Java");
+        JTextField layar = new JTextField();
+
 
         JButton tombol1 = new JButton("1");
         JButton tombol2 = new JButton("2");
@@ -26,7 +31,10 @@ public class Kalkulator {
         JButton tombolkali = new JButton("x");
         JButton tombolbagi = new JButton(":");
 
-        jendela.add(meja);
+        jendela.setLayout(new BorderLayout());
+
+        jendela.add(layar,BorderLayout.NORTH);
+        jendela.add(meja, BorderLayout.CENTER);
         meja.setLayout(layout);
         meja.add(tombol1);
         meja.add(tombol2);
@@ -43,9 +51,11 @@ public class Kalkulator {
         meja.add(tombolbagi);
         meja.add(tombolkali);
 
-        tombol1.addActionListener(tombol1);
+        tombol1.addActionListener(e ->{
+            System.out.println(tombol1.getText());
+        });
 
-        jendela.setTitle("Kalkulator Java");
+
         jendela.setSize(400,500);
 
 
