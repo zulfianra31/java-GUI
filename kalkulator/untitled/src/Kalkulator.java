@@ -30,6 +30,7 @@ public class Kalkulator {
         JButton tombolkurang = new JButton("-");
         JButton tombolkali = new JButton("x");
         JButton tombolbagi = new JButton(":");
+        JButton tombolsamadengan = new JButton("=");
 
         jendela.setLayout(new BorderLayout());
 
@@ -50,6 +51,8 @@ public class Kalkulator {
         meja.add(tombolkurang);
         meja.add(tombolbagi);
         meja.add(tombolkali);
+        meja.add(tombolsamadengan);
+
 
         tombol1.addActionListener(e ->{
             layar.setText(layar.getText() + tombol1.getText());
@@ -82,6 +85,21 @@ public class Kalkulator {
         tombol0.addActionListener(e -> {
             layar.setText(layar.getText() + tombol0.getText());
         });
+
+        tomboltambah.addActionListener(e -> {
+            layar.setText(layar.getText() + " + ");
+        });
+
+        tombolsamadengan.addActionListener(e -> {
+            String[] bagian = layar.getText().split("\\+");
+
+            int angkaPertama = Integer.parseInt(bagian[0].trim());
+            int angkaKedua = Integer.parseInt(bagian[1].trim());
+
+            int hasil = angkaPertama + angkaKedua;
+            layar.setText(String.valueOf(hasil));
+        });
+
 
 
         jendela.setSize(400,500);
