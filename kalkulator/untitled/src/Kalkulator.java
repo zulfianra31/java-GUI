@@ -52,7 +52,35 @@ public class Kalkulator {
         meja.add(tombolkali);
 
         tombol1.addActionListener(e ->{
-            System.out.println(tombol1.getText());
+            layar.setText(layar.getText() + tombol1.getText());
+        });
+        tombol2.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol2.getText());
+        });
+        tombol3.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol3.getText());
+        });
+        tombol4.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol4.getText());
+        });
+        tombol5.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol5.getText());
+        });
+        tombol6.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol6.getText());
+        });
+        tombol7.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol7.getText());
+        });
+        tombol8.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol8.getText());
+        });
+        tombol9.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol9.getText());
+        });
+
+        tombol0.addActionListener(e -> {
+            layar.setText(layar.getText() + tombol0.getText());
         });
 
 
