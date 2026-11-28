@@ -100,7 +100,19 @@ public class Kalkulator {
             layar.setText(String.valueOf(hasil));
         });
 
+        tombolkurang.addActionListener(e -> {
+            layar.setText(layar.getText() + " - ");
+        });
 
+        tombolsamadengan.addActionListener(e -> {
+            String[] bagian = layar.getText().split("-");
+
+            int angkaPertama = Integer.parseInt(bagian[0].trim());
+            int angkaKedua = Integer.parseInt(bagian[1].trim());
+
+            int hasil = angkaPertama - angkaKedua;
+            layar.setText(String.valueOf(hasil));
+        });
 
         jendela.setSize(400,500);
 
